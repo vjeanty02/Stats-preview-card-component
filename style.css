@@ -1,28 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 
-/*test*/
+
+/*=============================================
+=            test            =
+=============================================*/
 .border{
-    border: 1px solid red;
-  }
-  
-  /*Color*/
-  
-  :root {
-      --color-primary: hsl(233, 47%, 7%); /*Very dark blue (main background)*/
-      --color-secondary:  hsl(244, 38%, 16%); /*Dark desaturated blue (card background)*/
-      --color-tertiairy:  hsl(277, 64%, 61%); /*Soft violet (accent)*/
-    
-      --paragrph-line: hsla(0, 0%, 100%, 0.75); /*Slightly transparent white (main paragraph)*/
-      --very-light-gray: hsla(0, 0%, 100%, 0.6); /*Slightly transparent white (stat headings)*/
+  border: 1px solid red;
+}
+/*=====  End of test  ======*/
 
-      --white : hsl(0, 0%, 100%); /*(main heading, stats)*/
-    }
 
+
+/*=============================================
+=            color            =
+=============================================*/
+:root {
+  --color-primary: hsl(233, 47%, 7%); /*Very dark blue (main background)*/
+  --color-secondary:  hsl(244, 38%, 16%); /*Dark desaturated blue (card background)*/
+  --color-tertiairy:  hsl(277, 64%, 61%); /*Soft violet (accent)*/
+
+  --paragraph-line: hsla(0, 0%, 100%, 0.75); /*Slightly transparent white (main paragraph)*/
+  --heading-line: hsla(0, 0%, 100%, 0.6); /*Slightly transparent white (stat headings)*/
+
+  --white : hsl(0, 0%, 100%); /*(main heading, stats)*/
+}
+/*=====  End of color  ======*/
+
+
+  
+
+/*=============================================
+=            display            =
+=============================================*/
+
+.flex
+{
+  display: flex;
+}
+.flex50
+{
+  flex-basis: 50%;
+}
+.flex-around
+{
+  display: flex;
+  justify-content: space-around;
+}
+.flex-column
+{
+  display: flex;
+  flex-direction: column;
+}
+.flex-column-center
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-column-between
+{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+}
+/*=====  End of display  ======*/
+
+
+/*=============================================
+=            general            =
+=============================================*/
 * 
 {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
   
 body 
@@ -31,6 +83,108 @@ body
     flex-direction: column;
     align-items: center;
     justify-content:space-between;
+    background-color: var(--color-primary);
 
     min-height: 100vh;
 }
+/*=====  End of general  ======*/
+
+
+/*=============================================
+=            Main           =
+=============================================*/
+.card-stats-preview {
+  display: flex;
+  max-width: calc(540px * 2);
+  justify-content: center;
+  background-color: var(--color-secondary);
+}
+/*----------  image  ----------*/
+.card-stats-preview_img
+{
+  max-width: 100%;
+  height: auto;
+}    
+.card-stats-preview_section-img
+{
+  flex-basis: 50%;
+}
+/*----------  desctiption  ----------*/
+.card-stats-preview_section-description
+{
+ flex-basis: 50%;
+ padding: 70px;
+
+ display: grid;
+ grid-template-rows:auto;
+ grid-template-columns: auto;
+ gap: 0px 20px;
+}
+.card-stats-preview_heading
+{
+  font-family: 'Inter', Courier, monospace;
+  font-size: 700;
+  color: var(--white);
+  grid-area: 1/1/2/4;
+  line-height: 120%;
+  font-size: 35px;
+}
+.card-stats-preview_heading span
+{
+  color: var(--color-tertiairy);
+}
+.card-stats-preview_p
+{
+  font-family: Lexend Deca;
+  color: var(--paragraph-line);
+  grid-area: 2/1/3/4;
+  line-height: 170%;
+  font-size: 15px;
+  font-weight: 300;
+}
+.card-stats-preview_stats
+{
+  color: var(--white);
+  font-family: 'Inter', Courier, monospace;
+}
+
+/*----------  companies templates querries  ----------*/
+.card-stats-preview_companies
+{
+  align-self: end;
+  grid-area: 3/1/4/2;
+}
+.card-stats-preview_templates
+ {
+  align-self: end;
+  grid-area: 3/2/4/3;
+ }
+ .card-stats-preview_querries
+ {
+  align-self: end;
+  grid-area: 3/3/4/4;
+ }
+ .card-stats-preview_p--upper
+ {
+  text-transform: uppercase;
+  font-size: 13px;
+  padding-top: 5px;
+ }
+ /*=====  End of Main  ======*/
+  
+
+    
+    /*--bg-violet: hsl(277deg, 100%, 50%, 0.42);
+    background: var(--bg-violet);
+    height: 100%;
+     .card-stats-preview_section-heading { grid-area: 2 / 2 / 3 / 5; }
+  .card-stats-preview_section-p { grid-area: 3 / 2 / 4 / 5; }
+  .card-stats-preview_section-companies { grid-area: 4 / 2 / 5 / 3 }
+  .card-stats-preview_section-templates { grid-area: 4 / 3 / 5 / 4; }
+  .card-stats-preview_section-querries { grid-area: 4 / 4 / 5 / 5; }
+  .card-product_img-mobile { grid-area: 1 / 6 / 6 / 11; }
+  .card-product_img-desktop { 
+    grid-area: auto;
+    max-width: 100%;
+    height: auto; 
+  }

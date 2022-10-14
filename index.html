@@ -12,7 +12,7 @@
   <header></header>
   <main>
     <div class="card-stats-preview">
-      <section class="card-stats-preview_section-description">
+      <section class="card-stats-preview_section-description"><!-- section-description -->
         <h1 class="card-stats-preview_heading">Get <span>insights</span> that help your business grow.</h1>
         
         <p class="card-stats-preview_p">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
@@ -31,11 +31,12 @@
         </section> 
       </section>
 
-      <div class="card-stats-preview_section-img">
-        <source media="(max-width:600px )" srcset="images/image-header-mobile.jpg">
-        <img class="card-stats-preview_img" src="images/image-header-desktop.jpg" alt="image" width="540" height="450">
-      </div>
-      
+      <div class="card-stats-preview_section-img"><!-- section-img -->
+        <picture>
+          <source media="(max-width:1200px )" srcset="images/image-header-mobile.jpg">
+          <img class="card-stats-preview_img" src="images/image-header-desktop.jpg" alt="image">
+        </picture>
+        <svg class="card-stats-preview_img--filter" width="540" height="450"><rect width="540" height="450"/></svg>
     </div> 
   </main>
   <footer>

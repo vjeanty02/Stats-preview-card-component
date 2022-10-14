@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/stats-preview-card-component-Aztu5n5Zx-)
 - Live Site URL: [Github](https://vjeanty02.github.io/Stats-preview-card-component/)
 
 ## My process
